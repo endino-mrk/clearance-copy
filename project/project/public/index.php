@@ -1,7 +1,8 @@
 <?php
 // Enforce authentication
 require_once __DIR__ . '/../config/bootstrap.php';
-require_once BASE_PATH . '/includes/auth_check.php';
+
+require_once __DIR__ . '/includes/auth_check.php';
 
 // If we reach here, the user is logged in.
 
@@ -102,7 +103,7 @@ $pendingClearances = [
 ];
 
 // Include header component
-include BASE_PATH . '/includes/header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
 <!-- Page Header -->
@@ -411,5 +412,5 @@ include BASE_PATH . '/includes/header.php';
 
 <?php
 // Include footer component
-include BASE_PATH . '/includes/footer.php';
+include __DIR__ . '/includes/footer.php';
 ?>

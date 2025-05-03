@@ -1,13 +1,12 @@
 <?php
-// Enforce authentication
-require_once __DIR__ . '/../config/bootstrap.php';
-require_once BASE_PATH . '/includes/auth_check.php';
+// Include helper functions
+include_once 'includes/functions.php';
 
-// If we reach here, the user is logged in.
-
-// Set page title and flag for charts for the header
+// Set page title
 $pageTitle = 'Dashboard';
-$useCharts = true; // Tell header to include ECharts library
+
+// Enable charts for this page
+$useCharts = true;
 
 // Sample data for dashboard stats
 $dashboardStats = [
@@ -102,7 +101,7 @@ $pendingClearances = [
 ];
 
 // Include header component
-include BASE_PATH . '/includes/header.php';
+include BASE_PATH . '/app/Views/components/header.php';
 ?>
 
 <!-- Page Header -->
@@ -411,5 +410,5 @@ include BASE_PATH . '/includes/header.php';
 
 <?php
 // Include footer component
-include BASE_PATH . '/includes/footer.php';
+include BASE_PATH . '/app/Views/components/footer.php';
 ?>

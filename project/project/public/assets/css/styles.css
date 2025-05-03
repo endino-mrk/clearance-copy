@@ -1,0 +1,84 @@
+/* Base styles */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Active sidebar link styles */
+.sidebar-link.active {
+    background-color: rgba(79, 70, 229, 0.1);
+    color: #4f46e5;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* Chart container styles */
+.chart-container {
+    min-height: 300px;
+}
+
+/* Button hover effects */
+button:hover, 
+a:hover {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Table styles */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .chart-container {
+        min-height: 250px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .sidebar, 
+    .mobile-sidebar,
+    .dashboard-actions,
+    form button {
+        display: none !important;
+    }
+    
+    main {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+    
+    body {
+        background-color: white !important;
+    }
+}
+
+/* Quick action buttons */
+.quick-action {
+    transition: transform 0.2s ease-in-out;
+}
+
+.quick-action:hover {
+    transform: translateY(-4px);
+} 
