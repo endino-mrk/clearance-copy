@@ -27,7 +27,7 @@ function requireLogin() {
  * @param array|string $allowedRoles Single role or array of allowed roles
  */
 function requireRole($allowedRoles) {
-    // requireLogin();
+    requireLogin();
     
     if (!is_array($allowedRoles)) {
         $allowedRoles = [$allowedRoles];
