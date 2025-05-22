@@ -27,7 +27,7 @@ function requireLogin() {
  * @param array|string $allowedRoles Single role or array of allowed roles
  */
 function requireRole($allowedRoles) {
-    requireLogin();
+    // requireLogin();
     
     if (!is_array($allowedRoles)) {
         $allowedRoles = [$allowedRoles];
@@ -49,7 +49,7 @@ function redirectToUserDashboard() {
     
     switch ($userType) {
         case 'Manager':
-            header('Location: /clearance/project/public/index.php');
+        header('Location: /clearance/project/public/role-admin/index.php');
             break;
         case 'Resident':
         case 'Treasurer':
